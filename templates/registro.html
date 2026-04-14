@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuario</title>
+</head>
+<body>
+    <h1>Registro de Usuario</h1>
+    
+    {% if mensaje %}
+    <p style="color: red;">{{ mensaje }}</p>
+    {% endif %}
+    
+    <form method="POST">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+        <br><br>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        
+        <label for="color">Color favorito:</label>
+        <select id="color" name="color" required>
+            <option value="">Seleccione un color...</option>
+            <option value="rojo">Rojo</option>
+            <option value="azul">Azul</option>
+            <option value="verde">Verde</option>
+            <option value="amarillo">Amarillo</option>
+            <option value="morado">Morado</option>
+            <option value="naranja">Naranja</option>
+            <option value="rosa">Rosa</option>
+            <option value="celeste">Celeste</option>
+            <option value="gris">Gris</option>
+            <option value="marron">Marrón</option>
+            <option value="violeta">Violeta</option>
+            <option value="turquesa">Turquesa</option>
+        </select>
+        <br><br>
+        
+        <button type="submit">Registrar</button>
+    </form>
+    
+    <br>
+    <a href="/login">Ir al login</a>
+</body>
+</html>
